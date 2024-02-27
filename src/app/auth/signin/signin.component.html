@@ -1,0 +1,120 @@
+<div class="clearfix"></div>
+<div class="parent_logsign">
+    <div class="child">
+        <div class="container">
+            <div class="logn_form  pn">
+                <div class="bottom_circe_desing">
+                    <div class="col-md-6 hidden-xs hidden-sm log_left_col5 pn">
+                        <div class="left_page_text">
+                            <h3>1Design</h3>
+                            <p>
+                                <span>1Design,</span>
+                                is a global INTERIOR DESIGNER platform & social net working where 
+                                business and independent professionals connect and callaborate remotety
+                            </p>
+                        </div>
+                        <div class="left_page_img">
+                            <img class="img-responsive" src="assets/img/log_sing/layer.png" alt="layer">
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 pn">
+                        <!-- log in form -->
+                        <div class="board long_sign_tabing">
+                            <!-- start tab navigation -->
+                            <div class="long_sign_btn">
+                                <ul class="nav nav-tabs custom_tab" id="myTab">
+                                    <li class="">
+                                        <a routerLink="/signup" class="sign_up_btn" title="sign up" aria-expanded="false">
+                                            <span class="tab_name">
+                                                sign up
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a routerLink="/signin" class="login_up_btn" title="log in" aria-expanded="false">
+                                            <span class="tab_name">
+                                                sign in
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end tab navigation -->
+                            <!-- start tab content -->
+                            <div class="tab-content log_sing_tab_content custom_tab_content col-md-12 pn">
+                                <div class="tab-pane fade active in" id="login">
+                                    <p class="sign_log_headeing">sign in</p>
+                                    <div class="main_logform">
+                                        <span class="link_url">{{ signInResponse.message }}</span>
+                                        <form [formGroup]="loginForm" (ngSubmit)="signInUser(signinForm)" #signinForm="ngForm" >
+                                            <div class="inputwrapper user_icon form-group">
+                                                <input class="form-control" type="email" name="emailSignIn" id="emailSignIn" ngModel placeholder="Email ID" formControlName="emailSignIn" [ngClass]="{ 'is-invalid': submitted && f.emailSignIn.errors }"/>
+                                                    <div *ngIf="submitted && f.emailSignIn.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.emailSignIn.errors.required">
+                                                        <span class="errorMsg">Email Id is required</span> 
+                                                    </div>
+                                                    <div *ngIf="f.emailSignIn.errors.email">
+                                                        <span class="errorMsg">Email Id is invalid</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inputwrapper passwrd_icon form-group"  >
+                                                <input class="form-control" type="text" name="passwordSignIn" id="passwordSignIn" ngModel placeholder="Password" formControlName="passwordSignIn" [ngClass]="{ 'is-invalid': submitted && f.passwordSignIn.errors }"/>
+                                                    <div *ngIf="submitted && f.passwordSignIn.errors" class="invalid-feedback">
+                                                       <div *ngIf="f.passwordSignIn.errors.required">
+                                                            <span class="errorMsg">Password is required</span> 
+                                                        </div>
+                                                        <div *ngIf="f.passwordSignIn.errors.minlength">
+                                                            <span class="errorMsg">Minimum length 6 character</span> 
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="reme_forget">
+                                                <div class="col-md-6 col-xs-6 pn">
+                                                    <p class="remember">
+                                                        <label class="cb check">
+                                                            <input type="checkbox" />
+                                                            <span class="cb-field"></span>
+                                                            <span class="cb-text">Remember me</span>
+                                                        </label>
+                                                    </p>														
+                                                </div>
+                                                <div class="col-md-6 col-xs-6 pn">
+                                                    <p class="forget">
+                                                        <a href="">Forget Password?</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 pn form-group" [formGroup]="loginForm">
+                                                <button type="submit" class="sign_in_button mt-1">
+                                                    sign in
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 pn mt-1 res_padd_bottom">
+                                            <p class="chose_one_text">
+                                                choose one of the following sign in methods 
+                                            </p>
+                                            <button class="sign_in_button logwit_f">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                With Facebook
+                                            </button>
+                                            <button class="sign_in_button logwit_g">
+                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                                With Google +
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end tab content -->
+                        </div>
+                        <!-- end log form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="clearfix"></div>
+<div class="parent_logsign">
+    <div class="child">
+        <div class="container">
+            <div class="logn_form  pn">
+                <div class="bottom_circe_desing">
+                    <div class="col-md-6 hidden-xs hidden-sm log_left_col5 pn">
+                        <div class="left_page_text">
+                            <h3>1Design</h3>
+                            <p>
+                                <span>1Design,</span>
+                                is a global INTERIOR DESIGNER platform & social net working where 
+                                business and independent professionals connect and callaborate remotety
+                            </p>
+                        </div>
+                        <div class="left_page_img">
+                            <img class="img-responsive" src="assets/img/log_sing/layer.png" alt="layer">
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 pn">
+                        <!-- log in form -->
+                        <div class="board long_sign_tabing">
+                            <!-- start tab navigation -->
+                            <div class="long_sign_btn">
+                                <ul class="nav nav-tabs custom_tab" id="myTab">
+                                    <li class="active">
+                                        <a routerLink="/signup" class="sign_up_btn" title="sign up" aria-expanded="false">
+                                            <span class="tab_name">
+                                                sign up
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a routerLink="/signin" class="login_up_btn" title="log in" aria-expanded="false">
+                                            <span class="tab_name">
+                                                sign in
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end tab navigation -->
+                            <!-- start tab content -->
+                            <div class="tab-content log_sing_tab_content custom_tab_content col-md-12 pn">
+                               
+                                <div class="tab-pane active in fade" id="sign_up">
+                                    <p class="sign_log_headeing">sign up</p>
+                                    <div class="main_logform">
+                                        <span class="link_url">{{ signupResponse.message }}</span>
+                                        <form [formGroup]="registerForm"  (ngSubmit)="signupUser(signupForm)" #signupForm="ngForm"   >
+                                            <div class="inputwrapper user_icon form-group" >
+                                                <input class="form-control"  type="text" name="name" id="name" ngModel  placeholder="Full Name"  formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                                                       <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                                       <div *ngIf="f.name.errors.required">
+                                                        <span class="errorMsg">Name is required</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inputwrapper email_icon form-group">
+                                                <!-- #modelDir="ngModel" [(ngModel)]="email"(ngModelChange)="isEmailExist(modelDir)"  --> 
+                                                <input  class="form-control"  type="email" name="email" id="email" ngModel placeholder="Email ID" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                                                       <span class="errorMsg">{{ isEmailExistResponse }}</span>
+                                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.email.errors.required">
+                                                        <span class="errorMsg">Email Id is required</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inputwrapper phone_icon form-group">
+                                                <input  class="form-control"  type="number" name="mobileno" id="mobileno" ngModel placeholder="Mobile No." formControlName="mobileno" [ngClass]="{ 'is-invalid': submitted && f.mobileno.errors }"/>
+                                                        <div *ngIf="submitted && f.mobileno.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.mobileno.errors.required">
+                                                        <span class="errorMsg">Mobile no. is required</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inputwrapper passwrd_icon form-group">
+                                                <input  class="form-control"  type="text" name="password" id="password" ngModel placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.password.errors.required">
+                                                        <span class="errorMsg">Password is required</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reme_forget">
+                                                <div class="col-md-12 col-xs-12 pn ">
+                                                    <p class="remember">
+                                                        <input  class="" type="radio" name="terms" id="terms" />
+                                                        I accepct the Term of Use & privacy policy by clicking Get Started
+                                                    </p>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 pn mt-1 res_padd_bottom form-group">
+                                                <button type="submit"  class="pull-left sign_in_button logwit_g">
+                                                    Get started
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tab content -->
+                        </div>
+                        <!-- end log form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

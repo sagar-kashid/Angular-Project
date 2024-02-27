@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="shortcut icon" type="image/icon" href="assets/img/logo.svg" />
+    <!-- Custom fonts for this template -->
+    <!-- Custom styles for this template -->
+</head>
+    <style>
+        
+    .navbar_lading .logo
+    {
+        margin: 0 !important;
+        padding-top: 5px !important;
+        /*position: relative;
+        left: 4rem;*/
+    }
+    @media (min-width: 768px) {
+      .navbar_lading .navbar_nav_landing {
+        width: 100%;
+        text-align: center;
+        float: none;
+      }
+      .navbar_lading .navbar_nav_landing > li {
+        float: none;
+        display: inline-block;
+      }
+      .navbar_lading .navbar_nav_landing > li.navbar-right {
+        float: right !important;
+      }
+    }
+
+    </style>
+    <body data-gr-c-s-loaded="true">
+        <!-- <div class="loader"></div> -->
+<!--        <section class="pageloader">
+            <div class="loader loader-3">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+            </div>
+        </section>-->
+        <!-- navigation -->
+        <nav class="navbar navbar-default navbar_lading pen" role="navigation" id="menu">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle minus collapsed" data-toggle="collapse" data-target="#navbar_collpase">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button> 
+                    <a class="navbar-brand logo" href="#">
+                        <img src="assets/img/logo.svg" alt="1Design">
+                    </a>  
+                </div>
+                <div class="navbar-collapse collapse landing_collapse" id="navbar_collpase">
+                    <ul class="nav navbar-nav navbar_nav_landing">
+                        <li class="active">
+                            <a routerLink="/home" class="menu_line_right wow ani">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/contactus" class="menu_line_right">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/howitworks" class="menu_line_right">
+                                how it works
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/designer">
+                                find a designer
+                            </a>    
+                        </li>
+                        <li class="navbar-right">
+                            <a routerLink="/designer" data-toggle="modal" data-target=".bs-example-modal-new">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="navbar-right" *ngIf="isNotLogin">
+                            <a routerLink="/signin">
+                                log in
+                            </a>
+                        </li>
+                        <li class="dropdown" *ngIf="!isNotLogin">
+                                <!-- <input class="dropdown-toggle_nav" type="text">
+ -->                                <a href="" class="dropdown-text  dropdown-toggle"  id="dropdownMenu1"  data-toggle="dropdown">
+                                    
+                                    Welcome {{globals.role}} !!
+                                    <span class="main_menu_down_i"> <i class="fa fa-angle-down" aria-hidden="true"></i><span>
+                                </span></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a  routerLink="/account-setting" class="black">
+                                            <i class="fa fa-cog black" aria-hidden="true"></i>
+                                            account setting 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a routerLink="/designer" class="black">
+                                             <i class="fa fa-user black" aria-hidden="true"></i>
+                                             profile 
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a [routerLink]="" (click)="logout()" class="divider_border black">
+                                            <i class="fa fa-sign-out black" aria-hidden="true"></i>
+                                            log out
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- main secation -->
+        <div id="fullpage">  
+            <div class="section first_secation" id="section0">
+                <div class="intro">
+                    <div class="first_secation_content">
+                        <p>
+                            interior design
+                        </p>
+                        <h2>
+                            the easiest way to desing beautifull home
+                        </h2>
+                        <p>
+                           find and work with talented interior designers online
+                        </p>
+                    </div>
+                    <div class="mt-3">
+                        <button class="sign_in_button logwit_g">
+                            OUR PROJECT
+                        </button>
+                        <button class="sign_in_button logwit_g">
+                            CONTACT US
+                        </button>
+                    </div>
+                </div>
+                <div class="down_arrow_mouse hidden-xs">
+                    <div class="scroll"></div>
+                </div>
+            </div>
+            <!-- end first secation -->
+            <div class="section second_secation" id="section1">
+                <div class="container">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="about_design_content">
+                                <span class="nuber_line_draw">01</span>
+                                <h3 class="diff_text_color"><span>About</span> <span class="orn_color">1design </span></h3>
+                                <p class="gre_busi_p">
+                                    Design is the secret to great business
+                                </p>
+                                <p class="paragrap_p">
+                                    long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                </p>
+                                 <span class="vertical_text">who are we</span>
+                                <button class="sign_in_button logwit_g mt-3">
+                                    READ MORE
+                                </button>
+                            </div>
+                            <!-- start for counter number -->
+                                <div class="number_count" id="counters">
+
+                                    <div class="number_column">
+                                        <p class="quantity-counter1 highlight">12</p>
+                                        <p>year of experience</p>
+                                    </div>
+                                    <div class="number_column">
+                                        <p class="quantity-counter2 highlight">476</p>
+                                        <p>completed projects</p>
+                                    </div>
+                                    <div class="number_column">
+                                        <p class="quantity-counter3 highlight">23</p>
+                                        <p>excellent staffs</p>
+                                    </div>
+                                    <div class="number_column">
+                                        <p class="quantity-counter4 highlight">123</p>
+                                        <p>perfect clients</p>
+                                    </div>
+                                    <div class="clear_both"></div>
+                                </div>
+                            <!-- end for counter number -->
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="about_design_image">
+                                <!-- <img src="assets/img/landing_assets/img/about_design.jpg"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end second secation -->
+            <div class="section third_secation" id="section2">
+               <div class="container">
+                   <div class="col-md-12 col-sm-12 col-xs-12">
+                       <div class="our_sevices">
+                            <div class="col-md-12 col-sm-12 col-xs-12 plus_draw">
+                                <span class="nuber_line_draw">02</span>
+                                <h3 class="diff_text_color">
+                                    <span class="orn_color">
+                                        our
+                                    </span>
+                                    <span>
+                                        services
+                                    </span>
+                                </h3>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            residenial design
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                            why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-building-o" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            commercial design ideas
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                           why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-industry" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            industrial
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                           why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            hospitality
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                           why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                    </div>
+                                </div>
+                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            religious
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                           why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="our_sevices_content">
+                                        <p class="font_awe margin_bottom_08">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                        </p>
+                                        <p class="sevice_middle_p margin_bottom_08">
+                                            residential design ideas
+                                        </p>
+                                        <p class="paragrap_p text_just_last_center margin_bottom_08">
+                                           why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas
+                                        </p> 
+                                   </div>
+                                </div>
+                                <span class="vertical_text_servi">who are we</span>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                             
+                            </div>
+                        </div>
+                   </div>
+               </div>
+            </div>
+            <!-- end third secation -->
+            <div class="section four_secation pn" id="section3">
+                  
+               <div class="container">
+                          <div class="col-md-12 plus_draw_testi">
+                            <span class="nuber_line_draw">03</span>
+                            <h3 class="diff_text_color">
+                                <span class="orn_color">
+                                    completed
+                                </span>
+                                <span>
+                                    projects
+                                </span>
+                            </h3>
+                            <span class="vertical_text_servi">portfollio</span>
+                        </div> 
+                   <div class="col-md-12 col-sm-12 col-xs-12">
+                       <!-- 88888888888888888888888888888888888888888888888 --> 
+                        <div class=cats>
+                    <ul>
+                        <li class=current><a href=.all>All</a>
+                            <li><a href=.vegetables>living Room</a>
+                                <li><a href=.hot>Bed Room</a>
+                                    <li><a href=.cold>Kitchen</a>
+                                        <li><a href=.fast>Bathroom</a>
+                                            <li><a href=.drinks>office</a></ul>
+                </div>
+                        <div class="gallery">
+                <div class="gallery-cat active all">
+                    <ul>
+                        <li>
+                            <a href="assets/img/first.jpg" data-fancybox=gallery1><img alt="" src="assets/img/first.jpg"></a>
+                            <li>
+                                <a href="assets/img/second.jpg" data-fancybox=gallery2><img alt="" src="assets/img/second.jpg"></a>
+                                <li>
+                                    <a href="assets/img/third.jpg" data-fancybox=gallery3><img alt="" src="assets/img/third.jpg"></a>
+                                    <li>
+                                        <a href="assets/img/third.jpg" data-fancybox=gallery4><img alt="" src="assets/img/third.jpg"></a>
+                                        <li>
+                                            <a href="assets/img/third.jpg" data-fancybox=gallery5><img alt="" src="assets/img/third.jpg"></a>
+                                            <li>
+                                                <a href="assets/img/third.jpg" data-fancybox=gallery6><img alt="" src="assets/img/third.jpg"></a>
+                                                <li>
+                                                    <a href="assets/img/third.jpg" data-fancybox=gallery7><img alt="" src="assets/img/third.jpg"></a>
+                                                    <li>
+                                                        <a href="assets/img/third.jpg" data-fancybox=gallery8><img alt="" src="assets/img/third.jpg"></a>
+                                                        <li>
+                                                            <a href="assets/img/third.jpg" data-fancybox=gallery9><img alt="" src="assets/img/third.jpg"></a>
+                                                            <li>
+                                                                <a href="assets/img/third.jpg" data-fancybox=gallery10><img alt="" src="assets/img/third.jpg"></a>
+                                                                <li>
+                                                                    <a href="assets/img/third.jpg" data-fancybox=gallery11><img alt="" src="assets/img/third.jpg"></a>
+                                                                    <li>
+                                                                          <a href="assets/img/second.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                    </ul>
+                </div>
+                <div class="gallery-cat vegetables">
+                    <ul>
+                        <li>
+                            <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                            <li>
+                              <a href="assets/img/first.jpg" data-fancybox=gallery2><img alt="" src="assets/img/first.jpg"></a>
+                                <li>
+                                   <a href="assets/img/third.jpg" data-fancybox=gallery3><img alt="" src="assets/img/third.jpg"></a>
+                                    <li>
+                                        <a href="assets/img/third.jpg" data-fancybox=gallery4><img alt="" src="assets/img/third.jpg"></a>
+                                        <li>
+                                           <a href="assets/img/third.jpg" data-fancybox=gallery5><img alt="" src="assets/img/third.jpg"></a>
+                                            <li>
+                                               <a href="assets/img/third.jpg" data-fancybox=gallery6><img alt="" src="assets/img/third.jpg"></a>
+                                                <li>
+                                                    <a href="assets/img/third.jpg" data-fancybox=gallery7><img alt="" src="assets/img/third.jpg"></a>
+                                                    <li>
+                                                       <a href="assets/img/third.jpg" data-fancybox=gallery8><img alt="" src="assets/img/third.jpg"></a>
+                                                        <li>
+                                                            <a href="assets/img/third.jpg" data-fancybox=gallery9><img alt="" src="assets/img/third.jpg"></a>
+                    </ul>
+                </div>
+                <div class="gallery-cat hot">
+                    <ul>
+                        <li>
+                             <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                            <li>
+                               <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                <li>
+                                  <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                    <li>
+                                        <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                        <li>
+                                            <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                            <li>
+                                                <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                                <li>
+                                                   <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                                    <li>
+                                                        <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                                        <li>
+                                                           <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/second.jpg"></a>
+                                                            
+                                                               
+                    </ul>
+                </div>
+                <div class="gallery-cat cold">
+                    <ul>
+                        <li>
+                            <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                            <li>
+                                 <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                <li>
+                                     <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                    <li>
+                                         <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                        <li>
+                                            <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                            <li>
+                                                <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                                <li>
+                                                     <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                                    <li>
+                                                         <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                                                        <li>
+                                                             <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/third.jpg"></a>
+                    </ul>
+                </div>
+                <div class="gallery-cat fast">
+                    <ul>
+                        <li>
+                            <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/first.jpg"></a>
+                            <li>
+                                <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/first.jpg"></a>
+                                <li>
+                                   <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/first.jpg"></a>
+                                                       </ul>
+                </div>
+                <div class="gallery-cat drinks">
+                    <ul>
+                        <li>
+                             <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/4.jpg"></a>
+                            <li>
+                                 <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/4.jpg"></a>
+                                <li>
+                                     <a href="assets/img/third.jpg" data-fancybox=gallery1><img alt="" src="assets/img/4.jpg"></a>
+                                   
+                    </ul>
+                </div>
+               
+            </div>
+
+                        <!-- 88888888888888888888888888888888888888888888888 -->
+                    </div>
+                </div>
+            </div>
+            <!-- end four secation -->
+            <div class="section five_secation pn" id="section3">
+                  
+               <div class="container">
+                   <div class="col-md-12 col-sm-12 col-xs-12">
+                       <!--  --> 
+                        
+          
+                        <div class="col-md-12">
+
+                            <div class="carousel slide testimonial_custom" data-ride="carousel" id="quote-carousel">
+                                <!-- Carousel Slides / Quotes -->
+                              <div class="col-md-12 plus_draw_testi_right">
+                            <span class="nuber_line_draw">04</span>
+                            <h3 class="diff_text_color">
+                                <span class="orn_color">
+                                    customers
+                                </span>
+                                <span>
+                                    say
+                                </span>
+                            </h3>
+                            <span class="vertical_text_servi">testimonial</span>
+                        </div> 
+
+                                <div class="carousel-inner text-center">
+                                   <!-- Quote 1 -->
+                                    <div class="item active">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                        why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                    <small class="reviewer_name">john stone-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <!-- Quote 2 -->
+                                    <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                       why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                    <small class="reviewer_name">john stone-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                    <!-- Quote 3 -->
+                                    <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                        why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                     <small class="reviewer_name">john stone-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                      <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                        why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                     <small class="reviewer_name">kalepsh-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                      <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                        why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                     <small class="reviewer_name">bidkar-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                      <div class="item">
+                                        <blockquote>
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-offset-2">
+                                                    <p class="reviw_paragrap_p">
+                                                        why not bring home decore ideas to life? browse through our hand-picked collection of decor ideas and inspriations for 
+                                                        residential space
+                                                    </p>
+                                                     <small class="reviewer_name">shivaji-<span class="orn_color">interior designer</span></small>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            
+                                <!-- Bottom Carousel Indicators -->
+                                <ol class="carousel-indicators indicator_imgae ">
+                                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt="">
+                                    </li>
+                                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt="">
+                                    </li>
+                                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                                    </li>
+                                     <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                                    </li>
+                                     <li data-target="#quote-carousel" data-slide-to="4"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                                    </li>
+                                     <li data-target="#quote-carousel" data-slide-to="5"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                                    </li>
+                                </ol>
+                                <!-- Carousel Buttons Next/Prev -->
+                                <a data-slide="prev" href="#quote-carousel" class="left carousel-control">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                </a>
+                                <a data-slide="next" href="#quote-carousel" class="right carousel-control">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end five secation -->
+            <div class="section six_secation" id="section4">
+               <div class="container">
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_us">
+                        <h3 class="diff_text_color pull-left"><span>CONTACT</span> <span class="orn_color">US </span></h3>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                           <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="contact_add">
+                                    <p>office address</p>
+                                    <p>
+                                        503 And 504, 5Th Floor, Building C2, Saudamini Commercial Complex, Right Bhusari Colony Paud road, Kothrud, Pune, Maharashtra 411038
+                                    </p>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12"></div>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="contact_add">
+                                    <p>Send Email</p>
+                                    <p>
+                                        contact@1design@gmail.com
+                                    </p>
+                                    <p>
+                                        info@1design.com
+                                    </p>
+                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12"></div>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="contact_add">
+                                    <p>call us</p>
+                                    <p>
+                                        020-25386101
+                                    </p>
+                                    <p>
+                                        202-25280848
+                                    </p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_us_form">
+                        <h3 class="diff_text_color pull-left"><span>CONTACT</span> <span class="orn_color">US </span></h3>
+                        <div class="col-md-12 col-sm-12 col-xs-12 anim_form">
+                            <div class="col-md-4">
+                                <div class="group_ani_form">      
+                                  <input type="text"  required>
+                                  <span class="highlight"></span>
+                                  <span class="bar"></span>
+                                  <label>Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="group_ani_form">      
+                                  <input type="text"  required>
+                                  <span class="highlight"></span>
+                                  <span class="bar"></span>
+                                  <label>your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="group_ani_form">      
+                                  <input type="number"  required>
+                                  <span class="highlight"></span>
+                                  <span class="bar"></span>
+                                  <label>your Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                               <div class="group_ani_form">      
+                                  <input type="text"  required>
+                                  <span class="highlight"></span>
+                                  <span class="bar"></span>
+                                  <label>message</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <button class="sign_in_button form_send_btn pull-left">
+                                SEND
+                                </button>
+                            </div>
+                        </div>
+
+                         
+                    </div>
+                </div>
+            </div>
+            <!-- end six secation -->
+        </div>
+             <!-- end main secation -->
+        <footer class="landing_fix_footer">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="footer_ul">
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <!--  for modal popup -->
+        <div class="modal fade bs-example-modal-new custom_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_box_main col-md-12 col-sm-12 col-xs-12">
+                    <div class="modal-header modal_header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="assets/img/close_sing.svg"></span></button>
+                        <p>popular searches</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-message">
+                            <div class="col-md-12 col-sm-12 col-xs-12 contact_us_form modal_search_form"> 
+                                <div class="group_ani_form">      
+                                    <input type="text"  required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>search professionals, photos,products & more...</label>
+                                    <span class="serach_icn_btn">
+                                       <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 pn popular_ser_list">
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <p>for inspiration</p>
+                                    <ul>
+                                       <li>
+                                            <a href="">
+                                                Kitchen Design Ideas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Exterior Design Ideas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Home Office design Ideas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Study Room Design Ideas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Office Design Ideas
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <p>for professionals</p>
+                                    <ul>
+                                       <li>
+                                            <a href="">
+                                                Architects
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Interior Designers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                General Contractors
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Home Builders
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Landscape Architects
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <p>for products</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                Furniture
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Furnishing
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Home Decor
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Kitchen Products
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Wall Decor
+                                            </a>
+                                        </li> 
+                                    </ul>
+                                </div>
+                                 <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <p>for blog</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                Art
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Home Interior
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Office Ideas
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Lights
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Outdoor
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <!--   <div class="col-md-12 col-sm-12 col-xs-12">
+                        <button class="sign_in_button logwit_g pull-right" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!--  end for modal popup -->
+       
+    </body>
+</html>

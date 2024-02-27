@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" >
+<body data-gr-c-s-loaded="true">
+<ng4-loading-spinner [threshold]="0" [timeout]="40000" [template]="template" [loadingText]="''" [zIndex]="9999"></ng4-loading-spinner>
+<app-header *ngIf="showMenu"></app-header> 
+<!--<router-outlet></router-outlet>-->
+<div [@myAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
+<app-footer></app-footer>  
+</body>
+
+
+</html>

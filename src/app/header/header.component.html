@@ -1,0 +1,134 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    
+</head>
+
+<header class="sticky" id="menu">
+    
+    
+    <div class="container">
+        <nav class="navbar navbar-default navbar-default-cutom">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" routerLink="/home">
+                        <img src="assets/img/logo.svg" alt="1Design">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-collapse-custom" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a routerLink="/contactus">Contact Us</a>
+                        </li>
+                        <li>
+                            <a routerLink="/howitworks">How It Work</a>
+                        </li>
+                        <li>
+                            <a routerLink="/designer">Find a Designer </a>
+                        </li>
+                        <li *ngIf="isNotLogin">
+                            <a routerLink="/signin">Log in</a>
+                        </li>
+                        <li class="dropdown"  *ngIf="!isNotLogin">
+                            <a href="" class="whiteIcon"  class="whiteIcon dropdown-text  dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                             <ul class="dropdown-menu">
+                                <li>
+                                    <a  [routerLink]="">
+                                       Private messages
+                                    </a>
+                                </li>
+                                
+                                <li class="divider"></li>
+                                <li>
+                                    <a [routerLink]="" style="font-size: 10px; color:red" >
+                                            You have no private messages
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a [routerLink]=""  class="divider_border">
+                                            See all messages
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown" *ngIf="!isNotLogin">
+                            <a href="" class="whiteIcon dropdown-text  dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  [routerLink]="">
+                                       Notification 1
+                                    </a>
+                                </li>
+                                
+                                <li class="divider"></li>
+                                <li>
+                                    <a [routerLink]=""  class="divider_border">
+                                        Notification 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" *ngIf="!isNotLogin">
+                            <a href="" class="dropdown-text  dropdown-toggle"  id="dropdownMenu1"  data-toggle="dropdown">
+                                Welcome {{globals.role}} !!
+                                <span class="main_menu_down_i"> <i class="fa fa-angle-down" aria-hidden="true"></i><span>
+                                    </span></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  routerLink="/account-setting">
+                                        <i class="fa fa-cog black" aria-hidden="true"></i>
+                                        account setting 
+                                    </a>
+                                </li>
+                                <li >
+                                    <a routerLink="/customer-account">
+                                        <i class="fa fa-user black" aria-hidden="true"></i>
+                                        My Account 
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a [routerLink]="" (click)="logout()" class="divider_border">
+                                        <i class="fa fa-sign-out black" aria-hidden="true"></i>
+                                        log out 
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+<!--                    <div class="serach-down">
+                        <form class="search-bar">
+                            <input type="search" class="sb" name="q" autocomplete="off" placeholder="What would you like to search for?" />
+
+                        </form>
+                    </div>
+                    <div class="selector">
+                        <button type="submit" class="sbtn fa fa-search"></button>
+                    </div>-->
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+    </div>
+</header>

@@ -1,0 +1,16 @@
+
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.mat-column-select {
+  overflow: initial;
+}
+.mat-input-element{
+    border: 1px solid #ccc;
+}

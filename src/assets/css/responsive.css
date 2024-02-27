@@ -1,0 +1,246 @@
+@media screen and (min-width: 320px) 
+{
+	#account-overview-container.affix
+	{
+  		position: static;
+  		top: 8rem;
+  		margin-top: 0rem !important;
+	}
+
+	#account-overview-containersecond.affix
+	{
+  		position: static;
+  		top: 14rem;
+	}
+	.masthead
+	{
+		padding-top: 6rem;
+	}
+
+	 .bottom_circe_desing
+ 	{
+  		position: relative;
+  		float: none;
+ 	}
+ 	.bottom_circe_desing::after
+	{
+	    position: absolute;
+	    content: '';
+	    background: #fff;
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 50%;
+	    right: 7rem;
+	    bottom: -14px;
+	    visibility: hidden;
+	}
+	.bottom_circe_desing::before
+	{
+	    position: absolute;
+	    content: '';
+	    background: #fff;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 50%;
+	    right: 6rem;
+	    bottom: -38px;
+	    visibility: hidden;
+	}
+
+ 	.long_sign_tabing .log_sing_tab_content 
+	{
+  		margin-top: 6rem;
+  		width: 85%;
+  		margin: 0px auto;
+	}
+
+	.res_padd_bottom
+	{
+		padding-bottom: 3rem !important;
+	}
+	.masthead
+	{
+		padding-top: 6rem;
+	}
+	.page_banner_blank .user_page_heade_tab_nav {
+	    position: relative;
+	    padding: 10rem 0rem 26rem 0rem;
+	}
+	.check_box_input
+	{
+		display: none !important;
+	}
+	.searchble_input
+	{
+		display: block;
+	}
+
+	
+    
+
+
+
+.user_form_tabing .user_form_nav li 
+{
+	float: none;
+	text-align: center;
+}
+	
+}
+
+@media screen and (min-width: 425px)
+{
+
+}
+
+@media screen and (min-width:481px)
+{
+	.masthead
+	{
+		padding-top: 6rem;
+	}
+
+	.page_banner_blank .user_page_heade_tab_nav {
+	    position: relative;
+	    padding:10rem 0rem 26rem 0rem;
+	}
+	.check_box_input
+	{
+		display: none !important;
+	}
+	.searchble_input
+	{
+		display: block;
+	}
+
+}
+
+@media only screen and (min-width: 768px)
+{
+	.masthead
+	{
+		padding-top: 0rem;
+	}
+	.navbar-right
+	{
+		float: none !important;
+	}
+
+	.navbar-collapse.collapse
+	{
+		padding-left: 8rem;
+	}
+
+	.page_banner_blank .user_page_heade_tab_nav {
+	    position: relative;
+	    padding: 12rem 0rem 12rem 0rem;
+	}
+	.check_box_input
+	{
+		display: none !important;
+	}
+	.searchble_input
+	{
+		display: block;
+	}
+
+	
+
+.user_form_tabing .user_form_nav li 
+{
+	float: left;
+	text-align: left;
+}
+
+	
+}
+
+@media only screen and (min-width: 992px) 
+{	
+
+	
+	#account-overview-container.affix
+	{
+	  position: fixed;
+	  top: 8rem;
+	  margin-top: 0rem !important;
+	}
+
+
+	#account-overview-containersecond.affix
+	{
+	   position: fixed;
+	   top: 14rem;
+	}
+	 .bottom_circe_desing
+ 	{
+  		position: relative;
+  		float: left;
+ 	}
+ 	.bottom_circe_desing::after
+	{
+	    position: absolute;
+	    content: '';
+	    background: #fff;
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 50%;
+	    right: 7rem;
+	    bottom: -14px;
+	    visibility: visible;
+	}
+	.bottom_circe_desing::before
+	{
+	    position: absolute;
+	    content: '';
+	    background: #fff;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 50%;
+	    right: 6rem;
+	    bottom: -38px;
+	    visibility: visible;
+	}
+	.long_sign_tabing .log_sing_tab_content 
+	{
+  		margin-top: 6rem;
+  		width: 85%;
+  		margin: none;
+	}
+	.res_padd_bottom
+	{
+		padding-bottom: 3rem !important;
+	}
+
+	.page_banner_blank .user_page_heade_tab_nav {
+	    position: relative;
+	    padding: 10rem 0rem 8rem 0rem;
+	}
+
+	.check_box_input
+	{
+		display: block !important;
+	}
+	.searchble_input
+	{
+		display: none;
+	}
+
+
+	
+}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1200px)and (max-width: 1600px) {
+	.navbar-right
+	{
+		float: right !important;
+	}
+	.masthead
+	{
+		padding-top: 0rem;
+	}
+}
+
+@media only screen and (min-width: 1610px)and (max-width: 2600px) {}

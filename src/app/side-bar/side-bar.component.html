@@ -1,0 +1,75 @@
+<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+    <div class="well well-small affix-top" id="account-overview-containersecond">
+        <div class="">
+            <div class="profile-link">
+                <ul>
+                    <li  >
+                        <a class="hvr-sweep myaccount_nav_logo" routerLink="/customer-account">
+                            <p data-letters="A"><b> My Account</b></p>    
+                            
+                        </a>
+                    </li>
+                    <li  >
+                        <a class="hvr-sweep" routerLink="/customer-account">
+                            <span class="">
+                                <i class="fa fa-dashboard"></i>
+                            </span>
+                            <span class="link_url">Dashboard</span>
+                        </a>
+                    </li>
+                    <li  [class.active]="router.url==='/rfq'">
+                        <a class="hvr-sweep" routerLink="/rfq">
+                            <span class="">
+                                <i class="fa fa-send"></i>
+                            </span>
+                            <span class="link_url">Request Quote</span>
+                        </a>
+                    </li>
+                     
+                    <li  [class.active]="router.url==='/rfq-grid'">
+                        <a class="hvr-sweep" routerLink="/rfq-grid">
+                            <span class="">
+                                <i class="fa fa-list"></i>
+                            </span>
+                            <span class="link_url">My Requests</span>
+                        </a>
+                    </li>
+                     <li   [class.active]="router.url==='/favourite'">
+                        <a class="hvr-sweep" routerLink="/favourite">
+                            <span class="">
+                                <i class="fa fa-heart"></i>
+                            </span>
+                            <span class="link_url">Favourite</span>
+                        </a>
+                    </li>
+                     <li   [class.active]="router.url==='/message'">
+                        <a class="hvr-sweep" routerLink="/message">
+                            <span class="">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <span class="link_url">Messages</span>
+                        </a>
+                    </li>
+                    <li  [class.active]="router.url==='/notification'">
+                        <a class="hvr-sweep" routerLink="/notification">
+                            <span class="">
+                                <i class="fa fa-bell"></i>
+                            </span>
+                            <span class="link_url">Notification</span>
+                        </a>
+                    </li>
+                   
+                   
+                    <li  [class.active]="router.url==='/account-setting'">
+                        <a class="hvr-sweep" routerLink="/account-setting">
+                            <span class="">
+                                <i class="fa fa-cog black"></i>
+                            </span>
+                            <span class="link_url">Account Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!--/left-->
+</div>
